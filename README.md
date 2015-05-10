@@ -2,8 +2,6 @@
 
 Creates a multiplication table for the first N Prime Numbers.
 
-// This program has no gem dependencies.
-
 ## Usage
 
 ```sh
@@ -28,6 +26,7 @@ To install, clone this repository and install dependencies with bundle.
 ```sh
 > git clone https://github.com/aukan/prime-multiplication-table.git
 > cd prime-multiplication-table
+> bundle install
 ```
 
 ## Modules
