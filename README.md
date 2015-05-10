@@ -42,23 +42,24 @@ To install, clone this repository and install dependencies with bundle.
 #### Example
 
 ```rb
-Prime.generate(5)
+Primes.generate(5)
 # [2, 3, 5, 7, 11]
-
-Prime.is_prime? 3
-# true
-
-Prime.is_prime? 4
-# false
 ```
 
 ### MultiplicationTable
 
 #### Methods
 
-+ ::new (numbers, [screen_size])
-  Creates a multiplication table.
++ ::new (row, column, [screen_size])
+  Instantiates a new multiplication table.
++ table
+  Returns multiplication table after evaluating row times column.
 + #to_s
+
+### Attributes
+
++ @row
++ @column
   
 #### Example
 
