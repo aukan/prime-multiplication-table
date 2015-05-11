@@ -14,9 +14,9 @@ Example:
 
 ```sh
 > ./bin/prime-mtable 2
-  * 2 3
-  2 4 6
-  3 6 9
+* 2 3
+2 4 6
+3 6 9
 ```
 
 ## Instalation
@@ -79,7 +79,7 @@ var ptable = MultiplicationTable.new (1..3).to_a
 puts ptable
 
 # Prints
-* 2 3
-2 4 6
-3 6 9
+# * 2 3
+# 2 4 6
+# 3 6 9
 ```
