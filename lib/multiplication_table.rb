@@ -27,6 +27,23 @@ class MultiplicationTable
   end
 
   def to_s
+    generate_table
+
+    res = "*"
+    @row.each do |re|
+      res += "\t#{re}"
+    end
+    res += "\n"
+
+    @column.each_with_index do |r,i|
+      res += "#{r}"
+      @row.each_with_index do |c,j|
+        res += "\t#{@table[i][j]}"
+      end
+      res += "\n"
+    end
+
+    res
   end
 
 end
