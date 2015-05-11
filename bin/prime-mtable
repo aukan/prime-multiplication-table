@@ -1,11 +1,32 @@
 #! /usr/bin/ruby
 
-require("#{File.dirname(__FILE__)}/../lib/multiplication_table")
-require("#{File.dirname(__FILE__)}/../lib/primes")
+require 'optparse' 
+require "#{File.dirname(__FILE__)}/../lib/multiplication_table"
+require "#{File.dirname(__FILE__)}/../lib/primes"
 
-n = ARGV[0] ? ARGV[0].to_i : -1
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: ./bin/prime-mtable [options]"
+
+  opts.on('-n N', '--number N', 'nth prime number') do |n|
+    options[:number] = n
+  end
+
+  opts.on('-f file', '--file file', 'Output to file') do |f|
+    options[:file] = f
+  end
+
+end.parse!
+
+n = options[:number] ? options[:number].to_i : -1
 
 primes = Primes.generate((n >= 0) ? n : 10)
 mt = MultiplicationTable.new(primes)
 
-mt.print
+if options[:file]
+  File.open "#{File.dirname(__FILE__)}/../" + options[:file], "w+" do |fd|
+    mt.print fd
+  end
+else
+  mt.print
+end

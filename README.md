@@ -1,19 +1,21 @@
 # Prime Multiplication Table
 
-Creates a multiplication table for the first N Prime Numbers.
+Creates a multiplication table for the first N Prime Numbers and writes it to STDOUT or a file.
 
 ## Usage
 
 ```sh
-./bin/prime-mtable [N]
+./bin/prime-mtable [options]
 
-  N - Number of primes to include in multiplication table. Defaults to 10.
+Usage: ./bin/prime-mtable [options]
+    -n, --number N                   nth prime number
+    -f, --file file                  Output to file
 ```
 
 Example:
 
 ```sh
-> ./bin/prime-mtable 2
+> ./bin/prime-mtable -n 2
 * 2 3
 2 4 6
 3 6 9
@@ -60,17 +62,14 @@ Primes.generate(5)
 
   Instantiates a new multiplication table.
 
-+ generate_table
++ print (stream)
 
-  Returns multiplication table after evaluating row times column.
-
-+ to_s
+  Writes multiplication table to stream.
 
 ### Attributes
 
 + @row
 + @column
-+ @table
   
 #### Example
 
