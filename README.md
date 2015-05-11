@@ -14,7 +14,7 @@ Example:
 
 ```sh
 > ./bin/prime-mtable 2
-  1 2 3
+  * 2 3
   2 4 6
   3 6 9
 ```
@@ -29,6 +29,12 @@ To install, clone this repository and install dependencies with bundle.
 > bundle install
 ```
 
+## Running the tests
+
+```rb
+rake spec
+```
+
 ## Modules
 
 ### Primes
@@ -36,6 +42,7 @@ To install, clone this repository and install dependencies with bundle.
 #### Methods
 
 + ::generate (number)
+
   Returns the first "n" prime numbers.
 
 #### Example
@@ -50,15 +57,20 @@ Primes.generate(5)
 #### Methods
 
 + ::new (row, column, [screen_size])
+
   Instantiates a new multiplication table.
+
 + generate_table
+
   Returns multiplication table after evaluating row times column.
+
 + #to_s
 
 ### Attributes
 
 + @row
 + @column
++ @table
   
 #### Example
 
