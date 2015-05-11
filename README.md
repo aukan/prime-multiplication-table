@@ -58,7 +58,7 @@ Primes.generate(5)
 
 #### Methods
 
-+ ::new (row, column, [screen_size])
++ ::new (row, column)
 
   Instantiates a new multiplication table.
 
