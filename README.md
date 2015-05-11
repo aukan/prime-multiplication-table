@@ -64,7 +64,7 @@ Primes.generate(5)
 
   Returns multiplication table after evaluating row times column.
 
-+ [#to_s]
++ to_s
 
 ### Attributes
 
