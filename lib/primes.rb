@@ -1,3 +1,9 @@
+##
+# Utility to obtain the nth prime number using the
+# Sieve of Eratosthenes.
+#
+# Author:: Pablo Gonzalez
+#
 class Primes
 
   class << self
@@ -5,9 +11,6 @@ class Primes
     # Generates the first n prime numbers
     # using the Sieve of Eratosthenes.
     #
-    # @method: generate
-    # @params:
-    #   + n: integer
     def generate (n)
       sieve(n).reject{|e| e == false }[0..n-1]
     end
