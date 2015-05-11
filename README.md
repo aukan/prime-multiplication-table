@@ -75,7 +75,7 @@ Primes.generate(5)
 
 ```rb
 var ptable = MultiplicationTable.new (1..3).to_a
-puts ptable
+ptable.print
 
 # Prints
 # * 2 3
