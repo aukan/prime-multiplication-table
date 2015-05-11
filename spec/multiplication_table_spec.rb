@@ -25,15 +25,21 @@ RSpec.describe MultiplicationTable do
     end
   end
 
-  describe '#to_s' do
-    it 'should return a string that prints the multiplication table' do
+  describe '#print' do
+    it 'should write the multiplication table to a stream' do
       mt = MultiplicationTable.new [2, 4], [5, 6]
 
-      expect(mt.to_s).to eq(
+      File.open("#{File.dirname(__FILE__)}/mt.txt", "w+") do |fd|
+        mt.print(fd)
+      end
+
+      expect(File.read "#{File.dirname(__FILE__)}/mt.txt").to eq(
         "*\t2\t4\n" +
         "5\t10\t20\n" +
         "6\t12\t24\n"
       )
+
+      File.unlink "#{File.dirname(__FILE__)}/mt.txt"
     end
   end
 end

@@ -36,7 +36,7 @@ class MultiplicationTable
   end
 
   ##
-  # Create a string which outputs the table.
+  # Outputs the table to a stream.
   #
   # Example:
   #
@@ -45,24 +45,22 @@ class MultiplicationTable
   #  8 16 32  8
   #  3  6 12  3
   #
-  def to_s
+  def print (stream = $stdout)
     generate_table
 
-    res = "*"
+    stream.write "*"
     @row.each do |re|
-      res += "\t#{re}"
+      stream.write "\t#{re}"
     end
-    res += "\n"
+    stream.write "\n"
 
     @column.each_with_index do |r,i|
-      res += "#{r}"
+      stream.write "#{r}"
       @row.each_with_index do |c,j|
-        res += "\t#{@table[i][j]}"
+        stream.write "\t#{@table[i][j]}"
       end
-      res += "\n"
+      stream.write "\n"
     end
-
-    res
   end
 
 end
