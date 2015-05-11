@@ -24,4 +24,16 @@ RSpec.describe MultiplicationTable do
       expect(mt.generate_table[1][1]).to eq(25)
     end
   end
+
+  describe '#to_s' do
+    it 'should return a string that prints the multiplication table' do
+      mt = MultiplicationTable.new [2, 4], [5, 6]
+
+      expect(mt.to_s).to eq(
+        "*  2 4\n" +
+        "5  10  20\n"
+        "6  12  24\n"
+      )
+    end
+  end
 end
