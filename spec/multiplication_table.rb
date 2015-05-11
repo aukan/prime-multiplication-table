@@ -30,9 +30,9 @@ RSpec.describe MultiplicationTable do
       mt = MultiplicationTable.new [2, 4], [5, 6]
 
       expect(mt.to_s).to eq(
-        "*  2 4\n" +
-        "5  10  20\n"
-        "6  12  24\n"
+        "*\t2\t4\n" +
+        "5\t10\t20\n" +
+        "6\t12\t24\n"
       )
     end
   end
