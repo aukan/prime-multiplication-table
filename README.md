@@ -35,7 +35,6 @@ To install, clone this repository and install dependencies with bundle.
 
 #### Methods
 
-+ ::is_prime? (number)
 + ::generate (number)
   Returns the first "n" prime numbers.
 
