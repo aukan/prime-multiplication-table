@@ -1,0 +1,9 @@
+#! /usr/bin/ruby
+
+require("#{File.dirname(__FILE__)}/../lib/multiplication_table")
+require("#{File.dirname(__FILE__)}/../lib/primes")
+
+primes = Primes.generate(ARGV[0].to_i || 10)
+mt = MultiplicationTable.new(primes)
+
+puts mt
