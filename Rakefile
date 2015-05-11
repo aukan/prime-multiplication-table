@@ -1,5 +1,9 @@
-task default: %w[test]
+begin
+  require 'rspec/core/rake_task'
 
-task :test do
-    `rspec spec/**/*.rb`
+  RSpec::Core::RakeTask.new(:spec)
+
+  task :default => :spec
+rescue LoadError
+  # no rspec available
 end
