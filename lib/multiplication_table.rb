@@ -1,17 +1,26 @@
+##
+# Generates and prints a multiplication table.
+#
+# Author:: Pablo Gonzalez
+#
 class MultiplicationTable
 
-  attr_accessor :row, :column, :screen_size
+  attr_accessor :row, :column
   attr_reader :table
 
-  def initialize (row, column = nil, screen_size = 80)
+  ##
+  # Initialize with a row and a column
+  #
+  def initialize (row, column = nil)
     @row = row
     @column = column || row
-    @screen_size = screen_size
 
     @table = []
   end
 
+  ##
   # Generate 2 dimensional array with multiplication table
+  #
   def generate_table
     @table = []
 
@@ -26,6 +35,16 @@ class MultiplicationTable
     @table
   end
 
+  ##
+  # Create a string which outputs the table.
+  #
+  # Example:
+  #
+  #  *  2  4  1
+  #  6 12 24  6
+  #  8 16 32  8
+  #  3  6 12  3
+  #
   def to_s
     generate_table
 
