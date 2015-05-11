@@ -20,8 +20,8 @@ RSpec.describe MultiplicationTable do
 
       expect(mt.generate_table[0][0]).to eq(16)
       expect(mt.generate_table[0][1]).to eq(20)
-      expect(mt.generate_table[1][0]).to eq(16)
-      expect(mt.generate_table[1][1]).to eq(20)
+      expect(mt.generate_table[1][0]).to eq(20)
+      expect(mt.generate_table[1][1]).to eq(25)
     end
   end
 end
