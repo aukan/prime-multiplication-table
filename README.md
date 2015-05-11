@@ -51,7 +51,7 @@ Primes.generate(5)
 
 + ::new (row, column, [screen_size])
   Instantiates a new multiplication table.
-+ table
++ generate_table
   Returns multiplication table after evaluating row times column.
 + #to_s
 
